@@ -25,10 +25,10 @@ public class NetworkPlayer : MonoBehaviour
     void Start()
     {
         photonView = GetComponent<PhotonView>();
-        OVRCameraRig rig = FindObjectOfType<OVRCameraRig>();
-        headRig = rig.transform.Find("Tracking Space/CenterEyeAnchor");
-        leftHandRig = rig.transform.Find("Tracking Space/LeftHandAnchor/LeftControllerAnchor");
-        rightHandRig = rig.transform.Find("Tracking Space/RightHandAnchor/RightControllerAnchor");
+        XROrigin rig = FindObjectOfType<XROrigin>();
+        headRig = rig.transform.Find("Camera Offset/Main Camera");
+        leftHandRig = rig.transform.Find("Camera Offset/Left Hand");
+        rightHandRig = rig.transform.Find("Camera Offset/Right Hand");
 
         //head.gameObject.SetActive(false);
         //rightHand.gameObject.SetActive(false);
@@ -45,9 +45,10 @@ public class NetworkPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (photonView.IsMine)
         {
-            MapPosition(head, headRig); 
+            MapPosition(head, headRig);
             MapPosition(leftHand, leftHandRig);
             MapPosition(rightHand, rightHandRig);
 

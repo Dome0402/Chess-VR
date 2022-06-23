@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
-using Unity.XR.CoreUtils;
+
 
 public class XRGrabNetworkInteractable : XRGrabInteractable
 {
@@ -26,16 +26,6 @@ public class XRGrabNetworkInteractable : XRGrabInteractable
     protected override void OnSelectEntering(XRBaseInteractor interactor)
     {
         photonView.RequestOwnership();
-
-        Debug.Log("Rotation anpassen...");
-
-        XROrigin rig = FindObjectOfType<XROrigin>();
-        Transform leftHandRig = rig.transform.Find("Camera Offset/Left Hand");
-        Transform rightHandRig = rig.transform.Find("Camera Offset/Right Hand");
-
-        interactor.attachTransform.rotation = rightHandRig.rotation;
-
-
         base.OnSelectEntering(interactor);
     }
 
@@ -44,4 +34,12 @@ public class XRGrabNetworkInteractable : XRGrabInteractable
         photonView.TransferOwnership(null);
         base.OnSelectExiting(interactor);
     }
+
+    /*   ????????????????????????????????????????????????????????????????????????????
+    protected override void OnSelectEnter(XRBaseInteractor interactor)
+    {
+        photonView.RequestOwnership();
+        base.OnSelectEnter(interactor);
+    }
+    */
 }
