@@ -27,14 +27,7 @@ public class XRGrabNetworkInteractable : XRGrabInteractable
     {
         photonView.RequestOwnership();
 
-        Debug.Log("Rotation anpassen...");
-
-        XROrigin rig = FindObjectOfType<XROrigin>();
-        Transform leftHandRig = rig.transform.Find("Camera Offset/Left Hand");
-        Transform rightHandRig = rig.transform.Find("Camera Offset/Right Hand");
-
-        interactor.attachTransform.rotation = rightHandRig.rotation;
-
+        Debug.Log("Request Ownership success");
 
         base.OnSelectEntering(interactor);
     }
@@ -42,6 +35,8 @@ public class XRGrabNetworkInteractable : XRGrabInteractable
     protected override void OnSelectExiting(XRBaseInteractor interactor)
     {
         photonView.TransferOwnership(null);
+
+        Debug.Log("Request Ownership success");
         base.OnSelectExiting(interactor);
     }
 }
