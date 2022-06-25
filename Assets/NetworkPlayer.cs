@@ -27,12 +27,13 @@ public class NetworkPlayer : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         OVRCameraRig rig = FindObjectOfType<OVRCameraRig>();
         headRig = rig.transform.Find("Tracking Space/CenterEyeAnchor");
-        leftHandRig = rig.transform.Find("Tracking Space/LeftHandAnchor/LeftControllerAnchor");
-        rightHandRig = rig.transform.Find("Tracking Space/RightHandAnchor/RightControllerAnchor");
+        leftHandRig = rig.transform.Find("Tracking Space/LeftHandAnchor");
+        rightHandRig = rig.transform.Find("Tracking Space/RightHandAnchor");
 
-        //head.gameObject.SetActive(false);
-        //rightHand.gameObject.SetActive(false);
-        //leftHand.gameObject.SetActive(false);
+        head.gameObject.SetActive(false);
+        rightHand.gameObject.SetActive(false);
+        leftHand.gameObject.SetActive(false);
+        
         if (photonView.IsMine)
         {
             foreach (var item in GetComponentsInChildren<Renderer>())
@@ -47,12 +48,12 @@ public class NetworkPlayer : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            MapPosition(head, headRig); 
-            MapPosition(leftHand, leftHandRig);
-            MapPosition(rightHand, rightHandRig);
+            MapPosition(head, XRNode.Head);
+            MapPosition(leftHand, XRNode.LeftHand);
+            MapPosition(rightHand, XRNode.RightHand);
 
-            UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
-            UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
+            //UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
+            //UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
         }
     }
 
@@ -77,13 +78,13 @@ public class NetworkPlayer : MonoBehaviour
         }
     }
 
-    void MapPosition(Transform target, Transform rigTransform)
+    void MapPosition(Transform target, XRNode node)
     {
-        //InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 position);
-        //InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation);
+        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 position);
+        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation);
 
-        target.position = rigTransform.position;
-        target.rotation = rigTransform.rotation;
+        //target.position = rigTransform.position;
+        //target.rotation = rigTransform.rotation;
 
     }
 }

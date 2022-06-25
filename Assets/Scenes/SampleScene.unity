@@ -260,7 +260,7 @@ MonoBehaviour:
   virtualGreenScreenDepthTolerance: 0.2
   mrcActivationMode: 0
   isInsightPassthroughEnabled: 0
-  _trackingOriginType: 0
+  _trackingOriginType: 1
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
@@ -296,6 +296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 955031820}
+  - {fileID: 575456216}
   m_Father: {fileID: 1058576501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -372,6 +373,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &575456215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 119155406}
+    m_Modifications:
+    - target: {fileID: 112276, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_Name
+      value: OVRControllerPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479374, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_controller
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+--- !u!4 &575456216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+  m_PrefabInstance: {fileID: 575456215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de34b92e7d056144fa96f96de72a0282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: 0
 --- !u!1001 &926542741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -576,6 +644,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand Presence
       objectReference: {fileID: 0}
+    - target: {fileID: 3621981467535291326, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621981467535291327, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
 --- !u!4 &926542742 stripped
@@ -583,6 +659,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3621981467535291324, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
   m_PrefabInstance: {fileID: 926542741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &936228289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 112276, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+  m_PrefabInstance: {fileID: 1851179288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &936228290
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936228289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &936228291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936228289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabBegin: 0.55
+  grabEnd: 0.35
+  m_parentHeldObject: 1
+  m_moveHandPosition: 0
+  m_gripTransform: {fileID: 1851179289}
+  m_grabVolumes:
+  - {fileID: 936228290}
+  m_controller: 2
+  m_parentTransform: {fileID: 85160268}
+  m_player: {fileID: 85324846}
+--- !u!54 &936228292
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936228289}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &955031819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -638,6 +770,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left Hand Presence
       objectReference: {fileID: 0}
+    - target: {fileID: 3621981467535291326, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621981467535291327, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
 --- !u!4 &955031820 stripped
@@ -673,6 +813,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 926542742}
+  - {fileID: 1851179289}
   m_Father: {fileID: 1789257162}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1266,6 +1407,30 @@ Transform:
   m_Father: {fileID: 85160268}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1104254132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3621981467535291326, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
+  m_PrefabInstance: {fileID: 955031819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1104254133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104254132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed62bf3ae2456c408f247f96808ce96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_modelOculusTouchQuestAndRiftSLeftController: {fileID: 0}
+  m_modelOculusTouchQuestAndRiftSRightController: {fileID: 0}
+  m_modelOculusTouchRiftLeftController: {fileID: 0}
+  m_modelOculusTouchRiftRightController: {fileID: 0}
+  m_modelOculusTouchQuest2LeftController: {fileID: 0}
+  m_modelOculusTouchQuest2RightController: {fileID: 0}
+  m_controller: 0
 --- !u!1 &1188904388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1631,72 @@ Transform:
   m_Father: {fileID: 85160268}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1851179288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 964326753}
+    m_Modifications:
+    - target: {fileID: 112276, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_Name
+      value: OVRControllerPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479374, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_controller
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+--- !u!4 &1851179289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+  m_PrefabInstance: {fileID: 1851179288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2050047979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,6 +1909,7 @@ GameObject:
   - component: {fileID: 140168098489131633}
   - component: {fileID: 140168098489131631}
   - component: {fileID: 140168098489131632}
+  - component: {fileID: 140168098489131634}
   m_Layer: 0
   m_Name: Pawn Black 3
   m_TagString: Untagged
@@ -1721,7 +1953,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140168098489131629}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -1845,6 +2077,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &140168098489131634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140168098489131629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &156668734882058949
 Transform:
   m_ObjectHideFlags: 0
@@ -1874,6 +2123,7 @@ GameObject:
   - component: {fileID: 174922548347478520}
   - component: {fileID: 174922548347478521}
   - component: {fileID: 174922548347478519}
+  - component: {fileID: 174922548347478522}
   m_Layer: 0
   m_Name: Rock  Black
   m_TagString: Untagged
@@ -1901,7 +2151,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174922548347478517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -2041,6 +2291,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &174922548347478522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174922548347478517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!33 &193050949367362317
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2212,6 +2479,7 @@ GameObject:
   - component: {fileID: 434027962086501891}
   - component: {fileID: 434027962086501890}
   - component: {fileID: 434027962086501889}
+  - component: {fileID: 434027962086501893}
   m_Layer: 0
   m_Name: Rock White
   m_TagString: Untagged
@@ -2226,7 +2494,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434027962086501888}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -2379,6 +2647,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0003906966, y: 0.00039069666, z: 0.0006287325}
   m_Center: {x: 5.020411e-10, y: 0.0000000018044375, z: 0.0003143662}
+--- !u!114 &434027962086501893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434027962086501888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &543450652950927343
 Transform:
   m_ObjectHideFlags: 0
@@ -2532,6 +2817,7 @@ GameObject:
   - component: {fileID: 989437558734451031}
   - component: {fileID: 989437558734451032}
   - component: {fileID: 989437558734451030}
+  - component: {fileID: 989437558734451033}
   m_Layer: 0
   m_Name: Rock  Black 2
   m_TagString: Untagged
@@ -2559,7 +2845,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989437558734451028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -2699,6 +2985,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &989437558734451033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989437558734451028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &1093380556167443442
 Transform:
   m_ObjectHideFlags: 0
@@ -2779,6 +3082,7 @@ GameObject:
   - component: {fileID: 1371973478093210992}
   - component: {fileID: 1371973478093210991}
   - component: {fileID: 1371973478093210990}
+  - component: {fileID: 1371973478093210994}
   m_Layer: 0
   m_Name: Knight White 2
   m_TagString: Untagged
@@ -2793,7 +3097,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371973478093210989}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -2946,6 +3250,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0003906965, y: 0.00039069657, z: 0.0006991382}
   m_Center: {x: -8.949428e-10, y: -5.820766e-11, z: 0.00034956905}
+--- !u!114 &1371973478093210994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371973478093210989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &1494221776357136832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,6 +3282,7 @@ GameObject:
   - component: {fileID: 1494221776357136835}
   - component: {fileID: 1494221776357136836}
   - component: {fileID: 1494221776357136834}
+  - component: {fileID: 1494221776357136837}
   m_Layer: 0
   m_Name: Pawn Black 2
   m_TagString: Untagged
@@ -2988,7 +3310,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494221776357136832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -3128,6 +3450,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &1494221776357136837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494221776357136832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &1508615579616838990
 Transform:
   m_ObjectHideFlags: 0
@@ -3199,6 +3538,7 @@ GameObject:
   - component: {fileID: 1612113620040090323}
   - component: {fileID: 1612113620040090322}
   - component: {fileID: 1612113620040090321}
+  - component: {fileID: 1612113620040090325}
   m_Layer: 0
   m_Name: Bishop White
   m_TagString: Untagged
@@ -3213,7 +3553,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612113620040090320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -3366,6 +3706,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00039044057, y: 0.00039044057, z: 0.0007870723}
   m_Center: {x: 3.6379788e-11, y: -2.1827873e-10, z: 0.0003935361}
+--- !u!114 &1612113620040090325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612113620040090320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!33 &1690615719020382840
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3595,6 +3952,7 @@ GameObject:
   - component: {fileID: 2392796132955452608}
   - component: {fileID: 2392796132955452609}
   - component: {fileID: 2392796132955452607}
+  - component: {fileID: 2392796132955452610}
   m_Layer: 0
   m_Name: Pawn Black
   m_TagString: Untagged
@@ -3622,7 +3980,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2392796132955452605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -3762,6 +4120,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &2392796132955452610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2392796132955452605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!33 &2435237365301781054
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4025,6 +4400,7 @@ GameObject:
   - component: {fileID: 3436056956123906056}
   - component: {fileID: 3436056956123906057}
   - component: {fileID: 3436056956123906055}
+  - component: {fileID: 3436056956123906058}
   m_Layer: 0
   m_Name: Pawn  Black 5
   m_TagString: Untagged
@@ -4052,7 +4428,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3436056956123906053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -4192,6 +4568,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &3436056956123906058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436056956123906053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &3453892513856673341
 Transform:
   m_ObjectHideFlags: 0
@@ -4275,6 +4668,7 @@ GameObject:
   - component: {fileID: 3754397166016340198}
   - component: {fileID: 3754397166016340197}
   - component: {fileID: 3754397166016340196}
+  - component: {fileID: 3754397166016340200}
   m_Layer: 0
   m_Name: Pawn White 5
   m_TagString: Untagged
@@ -4289,7 +4683,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3754397166016340195}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -4442,6 +4836,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: 1.0186341e-10, y: 0.0000000018117134, z: 0.00023973231}
+--- !u!114 &3754397166016340200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3754397166016340195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &3856157048487796085
 Transform:
   m_ObjectHideFlags: 0
@@ -4494,6 +4905,7 @@ GameObject:
   - component: {fileID: 3956225075244201924}
   - component: {fileID: 3956225075244201925}
   - component: {fileID: 3956225075244201923}
+  - component: {fileID: 3956225075244201926}
   m_Layer: 0
   m_Name: Bishop  Black
   m_TagString: Untagged
@@ -4521,7 +4933,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3956225075244201921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -4661,6 +5073,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &3956225075244201926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956225075244201921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!23 &3977781017776922827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4899,6 +5328,7 @@ GameObject:
   - component: {fileID: 4376781907012573840}
   - component: {fileID: 4376781907012573841}
   - component: {fileID: 4376781907012573839}
+  - component: {fileID: 4376781907012573842}
   m_Layer: 0
   m_Name: King  Black
   m_TagString: Untagged
@@ -4926,7 +5356,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4376781907012573837}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -5066,6 +5496,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &4376781907012573842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376781907012573837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &4471829584941527547
 Transform:
   m_ObjectHideFlags: 0
@@ -5095,6 +5542,7 @@ GameObject:
   - component: {fileID: 4538771486784793996}
   - component: {fileID: 4538771486784793995}
   - component: {fileID: 4538771486784793994}
+  - component: {fileID: 4538771486784793998}
   m_Layer: 0
   m_Name: Knight White
   m_TagString: Untagged
@@ -5109,7 +5557,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4538771486784793993}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -5262,6 +5710,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0003906966, y: 0.00039069666, z: 0.0006991382}
   m_Center: {x: 6.184564e-10, y: 0.0000000018044375, z: 0.00034956905}
+--- !u!114 &4538771486784793998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4538771486784793993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &4564629603707223219
 Transform:
   m_ObjectHideFlags: 0
@@ -5313,6 +5778,7 @@ GameObject:
   - component: {fileID: 4904132361036918660}
   - component: {fileID: 4904132361036918661}
   - component: {fileID: 4904132361036918659}
+  - component: {fileID: 4904132361036918662}
   m_Layer: 0
   m_Name: Queen  Black
   m_TagString: Untagged
@@ -5340,7 +5806,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4904132361036918657}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -5480,6 +5946,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &4904132361036918662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4904132361036918657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!33 &4921946681431808553
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5559,6 +6042,7 @@ GameObject:
   - component: {fileID: 5009163732829801346}
   - component: {fileID: 5009163732829801347}
   - component: {fileID: 5009163732829801345}
+  - component: {fileID: 5009163732829801348}
   m_Layer: 0
   m_Name: Knight  Black
   m_TagString: Untagged
@@ -5586,7 +6070,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5009163732829801343}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -5726,6 +6210,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &5009163732829801348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5009163732829801343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &5261616820337079970
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,6 +6242,7 @@ GameObject:
   - component: {fileID: 5261616820337079973}
   - component: {fileID: 5261616820337079974}
   - component: {fileID: 5261616820337079972}
+  - component: {fileID: 5261616820337079975}
   m_Layer: 0
   m_Name: Bishop  Black 2
   m_TagString: Untagged
@@ -5768,7 +6270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5261616820337079970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -5908,6 +6410,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &5261616820337079975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5261616820337079970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!23 &5292708842000648378
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5966,6 +6485,7 @@ GameObject:
   - component: {fileID: 5295464251747188263}
   - component: {fileID: 5295464251747188262}
   - component: {fileID: 5295464251747188266}
+  - component: {fileID: 5295464251747188267}
   m_Layer: 0
   m_Name: Rock White 2
   m_TagString: Untagged
@@ -6140,7 +6660,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5295464251747188261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -6248,6 +6768,23 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &5295464251747188267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5295464251747188261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &5298721346051850856
 Transform:
   m_ObjectHideFlags: 0
@@ -6277,6 +6814,7 @@ GameObject:
   - component: {fileID: 5308269128144882409}
   - component: {fileID: 5308269128144882408}
   - component: {fileID: 5308269128144882407}
+  - component: {fileID: 5308269128144882411}
   m_Layer: 0
   m_Name: Pawn White 6
   m_TagString: Untagged
@@ -6291,7 +6829,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5308269128144882406}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -6444,6 +6982,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: 1.3096724e-10, y: 0.000000002743036, z: 0.00023973231}
+--- !u!114 &5308269128144882411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308269128144882406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &5341151381124481543
 GameObject:
   m_ObjectHideFlags: 0
@@ -6459,6 +7014,7 @@ GameObject:
   - component: {fileID: 5341151381124481546}
   - component: {fileID: 5341151381124481545}
   - component: {fileID: 5341151381124481544}
+  - component: {fileID: 5341151381124481548}
   m_Layer: 0
   m_Name: Pawn White
   m_TagString: Untagged
@@ -6473,7 +7029,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5341151381124481543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -6626,6 +7182,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: -4.5110937e-10, y: 0.0000000018117134, z: 0.00023973231}
+--- !u!114 &5341151381124481548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5341151381124481543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!23 &5346689774804102787
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6721,6 +7294,7 @@ GameObject:
   - component: {fileID: 5584287969246411965}
   - component: {fileID: 5584287969246411964}
   - component: {fileID: 5584287969246411963}
+  - component: {fileID: 5584287969246411967}
   m_Layer: 0
   m_Name: Pawn White 7
   m_TagString: Untagged
@@ -6735,7 +7309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5584287969246411962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -6888,6 +7462,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: 3.6379788e-10, y: 0.0000000018117134, z: 0.00023973231}
+--- !u!114 &5584287969246411967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584287969246411962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!33 &5713875133059439426
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7091,6 +7682,7 @@ GameObject:
   - component: {fileID: 6442991857544208298}
   - component: {fileID: 6442991857544208299}
   - component: {fileID: 6442991857544208297}
+  - component: {fileID: 6442991857544208300}
   m_Layer: 0
   m_Name: Pawn  Black 7
   m_TagString: Untagged
@@ -7118,7 +7710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6442991857544208295}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -7258,6 +7850,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &6442991857544208300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442991857544208295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!33 &6580709725617879122
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7281,6 +7890,7 @@ GameObject:
   - component: {fileID: 6659170528243968108}
   - component: {fileID: 6659170528243968109}
   - component: {fileID: 6659170528243968107}
+  - component: {fileID: 6659170528243968110}
   m_Layer: 0
   m_Name: Pawn  Black 4
   m_TagString: Untagged
@@ -7308,7 +7918,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6659170528243968105}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -7448,6 +8058,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &6659170528243968110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6659170528243968105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &6714807788205561412
 Transform:
   m_ObjectHideFlags: 0
@@ -7491,6 +8118,7 @@ GameObject:
   - component: {fileID: 6818033395358830410}
   - component: {fileID: 6818033395358830409}
   - component: {fileID: 6818033395358830408}
+  - component: {fileID: 6818033395358830412}
   m_Layer: 0
   m_Name: Bishop White 2
   m_TagString: Untagged
@@ -7505,7 +8133,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6818033395358830407}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -7658,6 +8286,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0003904407, y: 0.00039044066, z: 0.0007870723}
   m_Center: {x: 9.677024e-10, y: -9.749783e-10, z: 0.0003935361}
+--- !u!114 &6818033395358830412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6818033395358830407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &6825137884848436648
 Transform:
   m_ObjectHideFlags: 0
@@ -7737,6 +8382,7 @@ GameObject:
   - component: {fileID: 6850656463620328538}
   - component: {fileID: 6850656463620328537}
   - component: {fileID: 6850656463620328536}
+  - component: {fileID: 6850656463620328540}
   m_Layer: 0
   m_Name: Pawn White 3
   m_TagString: Untagged
@@ -7751,7 +8397,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6850656463620328535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -7904,6 +8550,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: -1.6007107e-10, y: 0.0000000018117134, z: 0.00023973231}
+--- !u!114 &6850656463620328540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850656463620328535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!4 &7016232702250418269
 Transform:
   m_ObjectHideFlags: 0
@@ -8227,6 +8890,7 @@ GameObject:
   - component: {fileID: 8284295993449116969}
   - component: {fileID: 8284295993449116968}
   - component: {fileID: 8284295993449116967}
+  - component: {fileID: 8284295993449116971}
   m_Layer: 0
   m_Name: Pawn White 4
   m_TagString: Untagged
@@ -8241,7 +8905,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8284295993449116966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -8394,6 +9058,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: -1.45519135e-11, y: 0.0000000018117134, z: 0.00023973231}
+--- !u!114 &8284295993449116971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284295993449116966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!23 &8320804336561299513
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8451,6 +9132,7 @@ GameObject:
   - component: {fileID: 8328830271968314912}
   - component: {fileID: 8328830271968314911}
   - component: {fileID: 8328830271968314910}
+  - component: {fileID: 8328830271968314914}
   m_Layer: 0
   m_Name: King White
   m_TagString: Untagged
@@ -8465,7 +9147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8328830271968314909}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -8618,6 +9300,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00042808522, y: 0.00042808527, z: 0.0009973566}
   m_Center: {x: 1.3824318e-10, y: 0.0000000013678799, z: 0.0005007874}
+--- !u!114 &8328830271968314914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8328830271968314909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!23 &8341373360091583127
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8739,6 +9438,7 @@ GameObject:
   - component: {fileID: 8809906046815043861}
   - component: {fileID: 8809906046815043860}
   - component: {fileID: 8809906046815043859}
+  - component: {fileID: 8809906046815043863}
   m_Layer: 0
   m_Name: Pawn White 2
   m_TagString: Untagged
@@ -8753,7 +9453,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8809906046815043858}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -8906,6 +9606,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: -3.3469405e-10, y: 0.0000000018117134, z: 0.00023973231}
+--- !u!114 &8809906046815043863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8809906046815043858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &8816317059900164623
 GameObject:
   m_ObjectHideFlags: 0
@@ -8993,6 +9710,7 @@ GameObject:
   - component: {fileID: 8962486473367910934}
   - component: {fileID: 8962486473367910935}
   - component: {fileID: 8962486473367910933}
+  - component: {fileID: 8962486473367910936}
   m_Layer: 0
   m_Name: Pawn  Black 6
   m_TagString: Untagged
@@ -9020,7 +9738,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8962486473367910931}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -9160,6 +9878,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &8962486473367910936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962486473367910931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &8971091695110203295
 GameObject:
   m_ObjectHideFlags: 0
@@ -9175,6 +9910,7 @@ GameObject:
   - component: {fileID: 8971091695110203298}
   - component: {fileID: 8971091695110203297}
   - component: {fileID: 8971091695110203296}
+  - component: {fileID: 8971091695110203300}
   m_Layer: 0
   m_Name: Pawn White 8
   m_TagString: Untagged
@@ -9189,7 +9925,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8971091695110203295}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -9342,6 +10078,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00029778623, y: 0.0002977862, z: 0.00047946474}
   m_Center: {x: 4.802132e-10, y: 0.0000000018117134, z: 0.00023973231}
+--- !u!114 &8971091695110203300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8971091695110203295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &9046509603486316734
 GameObject:
   m_ObjectHideFlags: 0
@@ -9357,6 +10110,7 @@ GameObject:
   - component: {fileID: 9046509603486316737}
   - component: {fileID: 9046509603486316738}
   - component: {fileID: 9046509603486316736}
+  - component: {fileID: 9046509603486316739}
   m_Layer: 0
   m_Name: Knight  Black 2
   m_TagString: Untagged
@@ -9384,7 +10138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9046509603486316734}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -9524,6 +10278,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &9046509603486316739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9046509603486316734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &9054121872346707399
 GameObject:
   m_ObjectHideFlags: 0
@@ -9539,6 +10310,7 @@ GameObject:
   - component: {fileID: 9054121872346707402}
   - component: {fileID: 9054121872346707401}
   - component: {fileID: 9054121872346707400}
+  - component: {fileID: 9054121872346707404}
   m_Layer: 0
   m_Name: Queen White
   m_TagString: Untagged
@@ -9553,7 +10325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9054121872346707399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -9706,6 +10478,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0004165651, y: 0.00041656513, z: 0.000860957}
   m_Center: {x: 2.9103834e-11, y: 0.0000000017971615, z: 0.00043434693}
+--- !u!114 &9054121872346707404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054121872346707399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!33 &9095496259330371401
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9729,6 +10518,7 @@ GameObject:
   - component: {fileID: 9112698401364177239}
   - component: {fileID: 9112698401364177240}
   - component: {fileID: 9112698401364177238}
+  - component: {fileID: 9112698401364177241}
   m_Layer: 0
   m_Name: Pawn  Black 8
   m_TagString: Untagged
@@ -9756,7 +10546,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9112698401364177236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d0b1e82a07011c4ab8cfecfd5922446, type: 3}
   m_Name: 
@@ -9896,6 +10686,23 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &9112698401364177241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9112698401364177236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!23 &9162619986066988881
 MeshRenderer:
   m_ObjectHideFlags: 0
